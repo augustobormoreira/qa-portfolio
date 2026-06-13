@@ -1,2 +1,3 @@
-# qa-portfolio
-This is my QA Portfolio.
+# 👨‍💻 Portfólio QA — Augusto Borges
+
+Repositório com minha prática em testes manuais de software.
