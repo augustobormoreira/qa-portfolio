@@ -44,3 +44,26 @@ Sistema exibe mensagem "Conta com e-mail já cadastrada!"
 
 ### Resultado obtido
 Sistema sobrescreve conta existente com novos dados sem exibir erro.
+
+## CT-003 — Transferência sem preencher o campo descrição
+
+| Campo | Valor |
+|---|---|
+| **Funcionalidade** | Transferência Bancária |
+| **Tipo** | Negativo |
+| **Status** | ❌ Falhou |
+| **Bug relacionado** | [BUG-003](https://github.com/augustobormoreira/qa-portfolio/issues/6) |
+
+### Pré-condições
+Usuário logado com saldo disponível
+
+### Passos para executar
+1. Acessar a tela de transferência.
+2. Preencher todos os campos menos o de descrição.
+3. Realizar a transferência.
+
+### Resultado esperado
+Sistema deve exibir mensagem de erro pois a descrição é um campo obrigatório conforme os requisitos da aplicação.
+
+### Resultado obtido
+Transferência realizada com sucesso sem preencher a descrição.
