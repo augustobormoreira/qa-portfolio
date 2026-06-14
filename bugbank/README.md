@@ -1,6 +1,6 @@
-# Bugbank - Testes Exploratórios
+# Bugbank - Testes 
 
-Aplicação bancária open source usada para prática de testes manuais.
+Aplicação bancária open source usada para prática de testes.
 
 ## O que foi testado
 - Cadastro de usuário
