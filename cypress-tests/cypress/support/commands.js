@@ -31,29 +31,46 @@ const inputName = {
   name: 1,
   password: 2,
   confirmPassword: 3,
-}
+};
 
-Cypress.Commands.add('clickRegister', () => {
-  cy.get('.login__buttons').within(() => {
-    cy.get('button[type="button"]').click()
-  })
-})
+Cypress.Commands.add("clickRegister", () => {
+  cy.get(".login__buttons").within(() => {
+    cy.get('button[type="button"]').click();
+  });
+});
 
-Cypress.Commands.add('registerUser', (email, name, password) => {
-  cy.clickRegister();
-  cy.get('.card__register').within(() => {
-    cy.get('input[name="email"]').type(email, { force: true })
-    cy.get('input[name="name"]').type(name, { force: true })
-    cy.get('input[name="password"]').type(password, { force: true })
-    cy.get('input[name="passwordConfirmation"]').type(password, { force: true })
-    cy.get('button[type="submit"]').click({ force: true })
-  })
-})
+Cypress.Commands.add(
+  "registerUser",
+  (email, name, password, initialBalance = 0) => {
+    cy.clickRegister();
+    cy.get(".card__register").within(() => {
+      cy.get('input[name="email"]').type(email, { force: true });
+      cy.get('input[name="name"]').type(name, { force: true });
+      cy.get('input[name="password"]').type(password, { force: true });
+      cy.get('input[name="passwordConfirmation"]').type(password, {
+        force: true,
+      });
+      if(initialBalance === 1000) cy.get("#toggleAddBalance").click({ force: true });
+      cy.get('button[type="submit"]').click({ force: true });
+    });
+  },
+);
 
-Cypress.Commands.add('getInput', (name) => {
-  cy.clickRegister();
-  cy.get('.card__register').within(() => {
-        cy.get('button[type="submit"]').click({force: true})
-        return cy.get('.input__warging').eq(inputName[name]);
-    })
-})
+Cypress.Commands.add("loginUser", (email, password) => {
+  cy.get(".card__login").within(() => {
+    cy.get('input[name="email"]').type(email);
+    cy.get('input[name="password"]').type(password);
+    cy.get('button[type="submit"]').click();
+  });
+});
+
+Cypress.Commands.add(
+  "registerAndLoginNewUser",
+  (email, name, password, initialBalance = 0) => {
+    cy.registerUser(email, name, password, initialBalance);
+
+    cy.get("#btnCloseModal").click();
+
+    cy.loginUser(email, password);
+  },
+);
