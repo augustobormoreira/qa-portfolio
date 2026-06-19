@@ -382,7 +382,144 @@ Sistema deve exibir mensagem "A conta XXX-X foi criada com sucesso".
 ### Resultado obtido
 Sistema exibe mensagem "A conta XXX-X foi criada com sucesso".
 
+# Transferência
 
+## CT-018 — Tentativa de transferência para conta inválida deve exibir mensagem de erro "Conta inválida ou inexistente"
+
+| Campo | Valor |
+|---|---|
+| **Funcionalidade** | Transferência |
+| **Tipo** | Positivo |
+| **Status** | ✅ Passou |
+
+### Pré-condições
+1. Usuário possuir registro e estar logado no sistema.
+
+### Passos para executar
+1. Acessar a tela de transferência.
+2. Preencher campos "Número da conta" e "Dígito" com dados inválidos ou conta inexistente.
+3. Preencher campos restantes com dados válidos.
+4. Clicar em "Transferir agora".
+
+### Resultado esperado
+Sistema deve exibir mensagem "Conta inválida ou inexistente".
+
+### Resultado obtido
+Sistema exibe mensagem "Conta inválida ou inexistente".
+
+## CT-019 — Tentativa de transferência com valor maior ao saldo disponível da conta não deve ser processada
+
+| Campo | Valor |
+|---|---|
+| **Funcionalidade** | Transferência |
+| **Tipo** | Positivo |
+| **Status** | ✅ Passou |
+
+### Pré-condições
+1. Usuário possuir registro e estar logado no sistema.
+
+### Passos para executar
+1. Acessar a tela de transferência.
+2. Preencher campo "Valor da transferência" com valor maior que o saldo disponível da conta.
+3. Preencher campos restantes com dados válidos.
+4. Clicar em "Transferir agora".
+
+### Resultado esperado
+Sistema deve exibir mensagem "Você não tem saldo o suficiente para essa transação".
+
+### Resultado obtido
+Sistema exibe mensagem "Você não tem saldo o suficiente para essa transação".
+
+## CT-020 — Tentativa de transferência sem campo obrigatório "Descrição" não deve ser processada
+
+| Campo | Valor |
+|---|---|
+| **Funcionalidade** | Transferência |
+| **Tipo** | Negativo |
+| **Status** | ❌ Falhou |
+| **Bug relacionado** | [BUG-010](https://github.com/augustobormoreira/qa-portfolio/issues/16) |
+
+### Pré-condições
+1. Usuário possuir registro e estar logado no sistema.
+
+### Passos para executar
+1. Acessar a página de transferência.
+2. Preencher campos com dados válidos.
+3. Deixar o campo "Descrição" em branco.
+4. Clicar em "Transferir agora".
+
+### Resultado esperado
+Sistema exibe mensagem de erro "Campo descrição não pode ser vazio" e não processa transação.
+
+### Resultado obtido
+Sistema não exibe mensagem de erro "Campo descrição não pode ser vazio" e processa transação com sucesso.
+
+## CT-021 — Tentativa de transferência com número menor ou igual a zero deve informar mensagem de erro
+
+| Campo | Valor |
+|---|---|
+| **Funcionalidade** | Transferência |
+| **Tipo** | Positivo |
+| **Status** | ✅ Passou |
+
+### Pré-condições
+1. Usuário possuir registro e estar logado no sistema.
+
+### Passos para executar
+1. Acessar a página de transferência.
+2. Preencher campos com dados válidos.
+3. Preencher campo "Valor da transferência" com valor menor ou igual a zero.
+4. Clicar em "Transferir agora".
+
+### Resultado esperado
+Sistema exibe mensagem de erro "Valor da transferência não pode ser 0 ou negativo".
+
+### Resultado obtido
+Sistema exibe mensagem de erro "Valor da transferência não pode ser 0 ou negativo".
+
+## CT-022 — Ao realizar transferência válida valor deve ser debitado corretamente
+
+| Campo | Valor |
+|---|---|
+| **Funcionalidade** | Transferência |
+| **Tipo** | Positivo |
+| **Status** | ✅ Passou |
+
+### Pré-condições
+1. Usuário possuir registro e estar logado no sistema.
+
+### Passos para executar
+1. Acessar a página de transferência.
+2. Preencher campos com dados válidos.
+3. Clicar em "Transferir agora".
+
+### Resultado esperado
+Sistema atualiza saldo com saldo anterior menos valor debitado.
+
+### Resultado obtido
+Sistema atualizou saldo com saldo anterior menos valor debitado.
+
+## CT-023 — Ao realizar transferência válida valor o usuário deve ser redirecionado para a página de extrato
+
+| Campo | Valor |
+|---|---|
+| **Funcionalidade** | Transferência |
+| **Tipo** | Negativo |
+| **Status** | ❌ Falhou |
+
+### Pré-condições
+1. Usuário possuir registro e estar logado no sistema.
+
+### Passos para executar
+1. Acessar a página de transferência.
+2. Preencher campos com dados válidos.
+3. Clicar em "Transferir agora".
+
+### Resultado esperado
+Sistema redireciona usuário para a página de extrato.
+
+### Resultado obtido
+Sistema mantém o usuário na página de transferência.
 
 
 
