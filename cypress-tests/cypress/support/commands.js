@@ -56,6 +56,20 @@ Cypress.Commands.add(
   },
 );
 
+Cypress.Commands.add(
+  "clearRegisterForm",
+  () => {
+    cy.clickRegister();
+    cy.get(".card__register").within(() => {
+      cy.get('input[name="email"]').clear({force: true});
+      cy.get('input[name="name"]').clear({force: true});
+      cy.get('input[name="password"]').clear({force: true});
+      cy.get('input[name="passwordConfirmation"]').clear({force: true});
+      cy.get('#btnBackButton').click({ force: true });
+    });
+  }
+)
+
 Cypress.Commands.add("loginUser", (email, password) => {
   cy.get(".card__login").within(() => {
     cy.get('input[name="email"]').type(email);
@@ -74,3 +88,23 @@ Cypress.Commands.add(
     cy.loginUser(email, password);
   },
 );
+
+Cypress.Commands.add("setUpTransfer", (transferValue) => {
+  cy.loginUser("pedro@teste.com", "pedro123");
+    cy.get("#textAccountNumber")
+      .should("not.have.text", "Conta digital: ")
+      .invoke("text")
+      .as("pedroAccountNumber");
+    cy.get("#btnExit").click();
+    cy.loginUser("joao@teste.com", "joao123");
+    cy.get("#btn-TRANSFERÊNCIA").click();
+    cy.get("@pedroAccountNumber").then((conta_string) => {
+      const contaPedro = conta_string.split(" ").pop();
+      const contaNumero = contaPedro.split("-")[0];
+      const contaDigito = contaPedro.split("-")[1];
+      cy.get('input[name="accountNumber"]').type(contaNumero);
+      cy.get('input[name="digit"]').type(contaDigito);
+      cy.get('input[name="transferValue"]').type(transferValue);
+      cy.get('button[type="submit"]').click();
+    });
+})
