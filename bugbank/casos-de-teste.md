@@ -201,85 +201,188 @@ Sistema deve informar "É campo obrigatório" abaixo do campo Confirmar Senha.
 ### Resultado obtido
 Sistema informa "É campo obrigatório" abaixo do campo Confirmar Senha.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-## CT-00X — Transferência sem informar conta de destino
+## CT-010 — Tentativa de Registro sem preencher apenas Nome deve exibir mensagem de erro
 
 | Campo | Valor |
 |---|---|
-| **Funcionalidade** | Transferência Bancária |
-| **Tipo** | Exploratório |
-| **Status** | ❌ Falhou |
-| **Bug relacionado** | [BUG-001](https://github.com/augustobormoreira/qa-portfolio/issues/2) |
+| **Funcionalidade** | Registro |
+| **Tipo** | Positivo |
+| **Status** | ✅ Passou |
 
 ### Pré-condições
-Usuário logado com saldo disponível
+Usuário estar na página de registro.
 
 ### Passos para executar
-1. Logar no sistema.
-2. Acessar tela de transferência.
-3. Preencher valor e deixar campo de conta vazio.
+1. Acessar a tela de cadastro.
+2. Deixar o campo nome vazio.
+3. Preencher todos os campos restantes com dados válidos.
+3. Clicar no botão de Cadastrar.
 
 ### Resultado esperado
-O sistema deve exibir mensagem "Campo de conta não pode ser vazio".
+Sistema deve informar mensagem de erro: "Nome não pode ser vazio".
 
 ### Resultado obtido
-O sistema informa que não pode fazer transferência para a mesma conta de destino.
+Sistema informa mensagem de erro: "Nome não pode ser vazio".
 
-## CT-00X — Cadastro de nova conta com e-mail já existente
+## CT-011 — Tentativa de Registro sem preencher e-mail deve exibir mensagem de erro "Email não pode ser vazio"
 
 | Campo | Valor |
 |---|---|
-| **Funcionalidade** | Cadastro de usuário |
-| **Tipo** | Exploratório |
-| **Status** | ❌ Falhou |
-| **Bug relacionado** | [BUG-002](https://github.com/augustobormoreira/qa-portfolio/issues/3) |
-
-### Pré-condições
-Usuário já cadastrado com e-mail teste@gmail.com
-
-### Passos para executar
-1. Acessar tela de cadastro
-2. Preencher com e-mail já existente
-3. Preencher demais campos
-4. Clicar em Cadastrar
-
-### Resultado esperado
-Sistema exibe mensagem "Conta com e-mail já cadastrada!"
-
-### Resultado obtido
-Sistema sobrescreve conta existente com novos dados sem exibir erro.
-
-## CT-003 — Transferência sem preencher o campo descrição
-
-| Campo | Valor |
-|---|---|
-| **Funcionalidade** | Transferência Bancária |
+| **Funcionalidade** | Registro |
 | **Tipo** | Negativo |
 | **Status** | ❌ Falhou |
-| **Bug relacionado** | [BUG-003](https://github.com/augustobormoreira/qa-portfolio/issues/6) |
+| **Bug relacionado** | [BUG-007](https://github.com/augustobormoreira/qa-portfolio/issues/12) |
 
 ### Pré-condições
-Usuário logado com saldo disponível
+Usuário estar na página de registro.
 
 ### Passos para executar
-1. Acessar a tela de transferência.
-2. Preencher todos os campos menos o de descrição.
-3. Realizar a transferência.
+1. Não preencher o campo e-mail.
+2. Preencher os campos restantes com dados válidos.
+2. Clicar em registrar.
 
 ### Resultado esperado
-Sistema deve exibir mensagem de erro pois a descrição é um campo obrigatório conforme os requisitos da aplicação.
+Sistema exibe mensagem de erro "Email não pode ser vazio." abaixo do input de nome.
 
 ### Resultado obtido
-Transferência realizada com sucesso sem preencher a descrição.
+A mensagem de erro "Email não pode ser vazio." não é exibida.
+
+## CT-012 — Tentativa de Registro sem preencher senha deve exibir mensagem de erro "Senha não pode ser vazio"
+
+| Campo | Valor |
+|---|---|
+| **Funcionalidade** | Registro |
+| **Tipo** | Negativo |
+| **Status** | ❌ Falhou |
+| **Bug relacionado** | [BUG-008](https://github.com/augustobormoreira/qa-portfolio/issues/13) |
+
+### Pré-condições
+Usuário estar na página de registro.
+
+### Passos para executar
+1. Não preencher o campo senha.
+2. Preencher os campos restantes com dados válidos.
+2. Clicar em registrar.
+
+### Resultado esperado
+Sistema exibe mensagem de erro "Senha não pode ser vazio." abaixo do input de nome.
+
+### Resultado obtido
+A mensagem de erro "Senha não pode ser vazio." não é exibida.
+
+## CT-013 — Tentativa de Registro sem preencher confirmar senha deve exibir mensagem de erro "Confirmar senha não pode ser vazio"
+
+| Campo | Valor |
+|---|---|
+| **Funcionalidade** | Registro |
+| **Tipo** | Negativo |
+| **Status** | ❌ Falhou |
+| **Bug relacionado** | [BUG-009](https://github.com/augustobormoreira/qa-portfolio/issues/14) |
+
+### Pré-condições
+Usuário estar na página de registro.
+
+### Passos para executar
+1. Não preencher o campo confirmar senha.
+2. Preencher os campos restantes com dados válidos.
+2. Clicar em registrar.
+
+### Resultado esperado
+Sistema exibe mensagem de erro "Confirmar senha não pode ser vazio." abaixo do input de nome.
+
+### Resultado obtido
+A mensagem de erro "Confirmar senha não pode ser vazio." não é exibida.
+
+## CT-014 — Deixar ativa a opção "Criar conta com saldo" deve criar conta com saldo R$ 1.000,00
+
+| Campo | Valor |
+|---|---|
+| **Funcionalidade** | Registro |
+| **Tipo** | Positivo |
+| **Status** | ✅ Passou |
+
+### Pré-condições
+Usuário estar na página de registro.
+
+### Passos para executar
+1. Preencher os campos com dados válidos.
+2. Marcar a opção criar conta com saldo.
+3. Voltar para a área de login.
+4. Entrar com usuário registrado.
+
+### Resultado esperado
+Sistema deve exibir "Saldo em conta R$ 1.000,00".
+
+### Resultado obtido
+Sistema exibe "Saldo em conta R$ 1.000,00".
+
+## CT-015 — Deixar ativa a opção "Criar conta com saldo" deve criar conta com saldo R$ 1.000,00
+
+| Campo | Valor |
+|---|---|
+| **Funcionalidade** | Registro |
+| **Tipo** | Positivo |
+| **Status** | ✅ Passou |
+
+### Pré-condições
+Usuário estar na página de registro.
+
+### Passos para executar
+1. Preencher os campos com dados válidos.
+2. Não marcar a opção criar conta com saldo.
+3. Voltar para a área de login.
+4. Entrar com usuário registrado.
+
+### Resultado esperado
+Sistema deve exibir "Saldo em conta R$ 0,00".
+
+### Resultado obtido
+Sistema exibe "Saldo em conta R$ 0,00".
+
+## CT-016 — Senhas diferentes deve exibir mensagem de erro "Senha e confirmação de senha precisam ser iguais"
+
+| Campo | Valor |
+|---|---|
+| **Funcionalidade** | Registro |
+| **Tipo** | Positivo |
+| **Status** | ✅ Passou |
+
+### Pré-condições
+Usuário estar na página de registro.
+
+### Passos para executar
+1. Preencher os campos com dados válidos.
+2. Preencher senha e confirmar senha com valores diferentes.
+3. Clicar em registrar.
+
+### Resultado esperado
+Sistema deve exibir mensagem de erro "Senha e confirmação de senha devem ser iguais".
+
+### Resultado obtido
+Sistema exibe mensagem de erro "Senha e confirmação de senha devem ser iguais".
+
+## CT-017 — Cadastrar conta com sucesso deve exibir número da conta
+
+| Campo | Valor |
+|---|---|
+| **Funcionalidade** | Registro |
+| **Tipo** | Positivo |
+| **Status** | ✅ Passou |
+
+### Pré-condições
+Usuário estar na página de registro.
+
+### Passos para executar
+1. Preencher os campos com dados válidos.
+2. Clicar em registrar.
+
+### Resultado esperado
+Sistema deve exibir mensagem "A conta XXX-X foi criada com sucesso".
+
+### Resultado obtido
+Sistema exibe mensagem "A conta XXX-X foi criada com sucesso".
+
+
+
+
+
