@@ -506,6 +506,7 @@ Sistema atualizou saldo com saldo anterior menos valor debitado.
 | **Funcionalidade** | Transferência |
 | **Tipo** | Negativo |
 | **Status** | ❌ Falhou |
+| **Bug relacionado** | [BUG-011](https://github.com/augustobormoreira/qa-portfolio/issues/17) |
 
 ### Pré-condições
 1. Usuário possuir registro e estar logado no sistema.
