@@ -7,4 +7,4 @@ Aplicação bancária open source usada para prática de testes.
 - Transferências
 
 ## Arquivos
-- [casos-de-teste.md](./casos-de-teste.md) — registro dos casos exploratórios
+- [casos-de-teste.md](./casos-de-teste.md) — registro dos casos de testes
