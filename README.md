@@ -1,3 +1,30 @@
-# 👨‍💻 Portfólio QA — Augusto Borges
+# Portfólio QA 🤖🐞
 
-Repositório com minha prática em testes manuais de software.
+Olá, eu me chamo [Augusto Borges](https://github.com/augustobormoreira) e seja muito bem-vindo(a) ao meu portfólio de QA! 
+
+Aqui, você encontrará todas minhas produções relacionadas à qualidade de software e testes, que expressam minhas habilidades e conhecimentos como um profissional de QA.
+
+Neste repositório, você verá:
+
+- Documentação da Qualidade
+  - Planos de Teste
+  - Cenários e Casos de Teste
+  - Relatórios de Bugs
+  - Resultados dos Testes
+- Testes Manuais
+- Testes Automatizados
+- Testes de Performance
+
+---
+
+## Aplicações Testadas
+- BugBank
+  - Casos de Teste
+- Academy of Bugs
+  - Casos de Teste
+
+---
+
+## Encontre-me na Web
+- 💼 [LinkedIn](https://www.linkedin.com/in/augusto-borges-a96638121/)
+- ✉️ [Email](mailto:augustobormoreira@gmail.com)
