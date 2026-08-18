@@ -27,7 +27,7 @@ Sistema informa que os campos Login e Senha são obrigatórios.
 | **Funcionalidade** | Login |
 | **Tipo** | Negativo |
 | **Status** | ❌ Falhou |
-| **Bug relacionado** | [BUG-004](https://github.com/augustobormoreira/qa-portfolio/issues/8) |
+| **Bug relacionado** | [BUG](https://github.com/augustobormoreira/qa-portfolio/issues/8) |
 
 ### Pré-condições
 Usuário não estar logado e na página inicial de login.
@@ -71,7 +71,7 @@ Sistema exibe campo inválido para e-mail inválido e "Usuário ou senha inváli
 | **Funcionalidade** | Registro de Usuário |
 | **Tipo** | Negativo |
 | **Status** | ❌ Falhou |
-| **Bug relacionado** | [BUG-005](https://github.com/augustobormoreira/qa-portfolio/issues/9) |
+| **Bug relacionado** | [BUG](https://github.com/augustobormoreira/qa-portfolio/issues/9) |
 
 ### Pré-condições
 E-mail não estar cadastrado.
@@ -140,7 +140,7 @@ Sistema informa "É campo obrigatório" abaixo do campo E-Mail.
 | **Funcionalidade** | Registro |
 | **Tipo** | Negativo |
 | **Status** | ❌ Falhou |
-| **Bug relacionado** | [BUG-006](https://github.com/augustobormoreira/qa-portfolio/issues/10) |
+| **Bug relacionado** | [BUG](https://github.com/augustobormoreira/qa-portfolio/issues/10) |
 
 ### Pré-condições
 Usuário estar na página de registro.
@@ -231,7 +231,7 @@ Sistema informa mensagem de erro: "Nome não pode ser vazio".
 | **Funcionalidade** | Registro |
 | **Tipo** | Negativo |
 | **Status** | ❌ Falhou |
-| **Bug relacionado** | [BUG-007](https://github.com/augustobormoreira/qa-portfolio/issues/12) |
+| **Bug relacionado** | [BUG](https://github.com/augustobormoreira/qa-portfolio/issues/12) |
 
 ### Pré-condições
 Usuário estar na página de registro.
@@ -254,7 +254,7 @@ A mensagem de erro "Email não pode ser vazio." não é exibida.
 | **Funcionalidade** | Registro |
 | **Tipo** | Negativo |
 | **Status** | ❌ Falhou |
-| **Bug relacionado** | [BUG-008](https://github.com/augustobormoreira/qa-portfolio/issues/13) |
+| **Bug relacionado** | [BUG](https://github.com/augustobormoreira/qa-portfolio/issues/13) |
 
 ### Pré-condições
 Usuário estar na página de registro.
@@ -277,7 +277,7 @@ A mensagem de erro "Senha não pode ser vazio." não é exibida.
 | **Funcionalidade** | Registro |
 | **Tipo** | Negativo |
 | **Status** | ❌ Falhou |
-| **Bug relacionado** | [BUG-009](https://github.com/augustobormoreira/qa-portfolio/issues/14) |
+| **Bug relacionado** | [BUG](https://github.com/augustobormoreira/qa-portfolio/issues/14) |
 
 ### Pré-condições
 Usuário estar na página de registro.
@@ -437,7 +437,7 @@ Sistema exibe mensagem "Você não tem saldo o suficiente para essa transação"
 | **Funcionalidade** | Transferência |
 | **Tipo** | Negativo |
 | **Status** | ❌ Falhou |
-| **Bug relacionado** | [BUG-010](https://github.com/augustobormoreira/qa-portfolio/issues/16) |
+| **Bug relacionado** | [BUG](https://github.com/augustobormoreira/qa-portfolio/issues/16) |
 
 ### Pré-condições
 1. Usuário possuir registro e estar logado no sistema.
@@ -506,7 +506,7 @@ Sistema atualizou saldo com saldo anterior menos valor debitado.
 | **Funcionalidade** | Transferência |
 | **Tipo** | Negativo |
 | **Status** | ❌ Falhou |
-| **Bug relacionado** | [BUG-011](https://github.com/augustobormoreira/qa-portfolio/issues/17) |
+| **Bug relacionado** | [BUG](https://github.com/augustobormoreira/qa-portfolio/issues/17) |
 
 ### Pré-condições
 1. Usuário possuir registro e estar logado no sistema.
