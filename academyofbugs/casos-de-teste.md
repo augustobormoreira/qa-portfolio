@@ -58,3 +58,44 @@ Todos os quatro vídeos executam normalmente.
 
 ### Resultado obtido
 Vídeos da coluna esquerda não executam.
+
+## CT-004 — Todos os 7 artigos devem exibir mais informações ao clicar em "Read More"
+
+| Campo | Valor |
+|---|---|
+| **Funcionalidade** | Redirecionamento |
+| **Tipo** | Negativo |
+| **Status** | ❌ Falhou |
+
+### Pré-condições
+Usuário estar na página de artigos.
+
+### Passos para executar
+1. Clicar em "Read More" de qualquer artigo presente na página.
+
+### Resultado esperado
+Usuário é redirecionado para a página específica do artigo.
+
+### Resultado obtido
+Sistema exibe mensagem "404 Error".
+
+## CT-005 — Pesquisar sobre um produto não deve retornar uma mensagem de erro
+
+| Campo | Valor |
+|---|---|
+| **Funcionalidade** | Busca |
+| **Tipo** | Positivo |
+| **Status** | ✅ Passou |
+
+### Pré-condições
+Usuário estar na página de produtos.
+
+### Passos para executar
+1. Escrever algo no input de search.
+2. Clicar no botão de "Search"
+
+### Resultado esperado
+Sistema mostra uma lista de produtos recomendados baseado na pesquisa.
+
+### Resultado obtido
+Sistema mostra uma lista de produtos recomendados baseado na pesquisa.
