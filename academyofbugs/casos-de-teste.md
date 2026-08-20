@@ -1,101 +1,34 @@
-## CT-001 — Clicar no botão de Social Media deve abrir uma página daquela Social Media para poder compartilhar o post
-
-| Campo | Valor |
+| *ID* | AB-CT-01 |
 |---|---|
-| **Funcionalidade** | Compartilhamento |
-| **Tipo** | Negativo |
-| **Status** | ❌ Falhou |
+| *Título* | Clicar no botão de Social Media deve abrir uma página daquela Social Media para poder compartilhar o post |
+| *Pré-condições* | Usuário estar na página de artigos |
+| *Passos do teste* | 1. Clicar em qualquer botão de qualquer Social Media |
+| *Resultado esperado* | Sistema redireciona usuário para Social Media equivalente ao botão clicado |
 
-### Pré-condições
-Usuário estar na página de artigos.
-
-### Passos para executar
-1. Clicar em qualquer botão de qualquer Social Media.
-
-### Resultado esperado
-Sistema redireciona Usuário para Social Media equivalente ao botão clicado.
-
-### Resultado obtido
-Sistema mantém usuário na mesma página de artigos.
-
-## CT-002 — Formulário deve exibir mensagem de sucesso ao clicar no botão Enviar
-
-| Campo | Valor |
+| *ID* | AB-CT-02 |
 |---|---|
-| **Funcionalidade** | Feedback |
-| **Tipo** | Negativo |
-| **Status** | ❌ Falhou |
+| *Título* | Formulário deve exibir mensagem de sucesso ao clicar no botão Enviar |
+| *Pré-condições* | Usuário estar na página de envio do formulário |
+| *Passos do teste* | 1. Preencher o formulário com dados válidos<br>2. Clicar no botão "Send" |
+| *Resultado esperado* | Sistema exibe mensagem de confirmação para o usuário |
 
-### Pré-condições
-Usuário estar na página de envio do formulário.
-
-### Passos para executar
-1. Preencher o formulário com dados válidos.
-2. Clicar no botão "Send".
-
-### Resultado esperado
-Sistema exibe mensagem de confirmação para o Usuário.
-
-### Resultado obtido
-Sistema exibe uma mensagem de erro.
-
-## CT-003 — Todos os 4 vídeos devem executar normalmente quando o Usuário clicar no botão de Play
-
-| Campo | Valor |
+| *ID* | AB-CT-03 |
 |---|---|
-| **Funcionalidade** | Vídeo |
-| **Tipo** | Negativo |
-| **Status** | ❌ Falhou |
+| *Título* | Todos os 4 vídeos devem executar normalmente quando o usuário clicar no botão de Play |
+| *Pré-condições* | Usuário estar na página das últimas notícias |
+| *Passos do teste* | 1. Clicar no botão de play dos vídeos |
+| *Resultado esperado* | Todos os quatro vídeos executam normalmente |
 
-### Pré-condições
-Usuário estar na página das últimas notícias.
-
-### Passos para executar
-1. Clicar no botão de play dos vídeos.
-
-### Resultado esperado
-Todos os quatro vídeos executam normalmente.
-
-### Resultado obtido
-Vídeos da coluna esquerda não executam.
-
-## CT-004 — Todos os 7 artigos devem exibir mais informações ao clicar em "Read More"
-
-| Campo | Valor |
+| *ID* | AB-CT-04 |
 |---|---|
-| **Funcionalidade** | Redirecionamento |
-| **Tipo** | Negativo |
-| **Status** | ❌ Falhou |
+| *Título* | Todos os 7 artigos devem exibir mais informações ao clicar em "Read More" |
+| *Pré-condições* | Usuário estar na página de artigos |
+| *Passos do teste* | 1. Clicar em "Read More" de qualquer artigo presente na página |
+| *Resultado esperado* | Usuário é redirecionado para a página específica do artigo |
 
-### Pré-condições
-Usuário estar na página de artigos.
-
-### Passos para executar
-1. Clicar em "Read More" de qualquer artigo presente na página.
-
-### Resultado esperado
-Usuário é redirecionado para a página específica do artigo.
-
-### Resultado obtido
-Sistema exibe mensagem "404 Error".
-
-## CT-005 — Pesquisar sobre um produto não deve retornar uma mensagem de erro
-
-| Campo | Valor |
+| *ID* | AB-CT-05 |
 |---|---|
-| **Funcionalidade** | Busca |
-| **Tipo** | Positivo |
-| **Status** | ✅ Passou |
-
-### Pré-condições
-Usuário estar na página de produtos.
-
-### Passos para executar
-1. Escrever algo no input de search.
-2. Clicar no botão de "Search"
-
-### Resultado esperado
-Sistema mostra uma lista de produtos recomendados baseado na pesquisa.
-
-### Resultado obtido
-Sistema mostra uma lista de produtos recomendados baseado na pesquisa.
+| *Título* | Pesquisar sobre um produto não deve retornar uma mensagem de erro |
+| *Pré-condições* | Usuário estar na página de produtos |
+| *Passos do teste* | 1. Escrever algo no input de search<br>2. Clicar no botão de "Search" |
+| *Resultado esperado* | Sistema mostra uma lista de produtos recomendados baseado na pesquisa |
