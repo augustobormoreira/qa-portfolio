@@ -104,7 +104,7 @@ describe("academyofbugs-bug_examples", () => {
     cy.get('h3.sq-main-title').should('not.contain', '404 Error');
   })
 
-  it.only("should find results after typing in search bar and clicking search button", () => {
+  it("CT-005 - Buscar um produto deve retornar produtos baseados naquela pesquisa", () => {
     cy.visit('https://academybugs.com/store/dnk-yellow-shoes/');
 
     cy.get('h1.ec_details_title').invoke('text').then((text) => cy.get('input[name="ec_search"]').type(text));
