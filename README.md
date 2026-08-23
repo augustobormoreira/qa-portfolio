@@ -9,7 +9,6 @@ Neste repositório, você verá:
 - Documentação da Qualidade
   - Casos de Teste
   - Relatórios de Bugs
-  - Resultados dos Testes
 - Testes Automatizados
 
 ---
