@@ -2,9 +2,5 @@
 
 Aplicação bancária open source usada para prática de testes.
 
-## O que foi testado
-- Cadastro de usuário
-- Transferências
-
-## Arquivos
+## Casos de Teste
 - [casos-de-teste.md](./casos-de-teste.md) — Registro dos Casos de Teste
