@@ -7,21 +7,18 @@ Aqui, você encontrará todas minhas produções relacionadas à qualidade de so
 Neste repositório, você verá:
 
 - Documentação da Qualidade
-  - Planos de Teste
-  - Cenários e Casos de Teste
+  - Casos de Teste
   - Relatórios de Bugs
   - Resultados dos Testes
-- Testes Manuais
 - Testes Automatizados
-- Testes de Performance
 
 ---
 
 ## Aplicações Testadas
 - BugBank
-  - Casos de Teste
+  - [Casos de Teste](./bugbank/casos-de-teste.md)
 - Academy of Bugs
-  - Casos de Teste
+  - [Casos de Teste](./academyofbugs/casos-de-teste.md)
 
 ---
 
