@@ -26,6 +26,12 @@ Neste repositório, você verá:
 - [Reports](https://github.com/augustobormoreira/qa-portfolio/issues)
 ---
 
+## Skills
+- JavaScript
+- Cypress
+- Git
+---
+
 ## Encontre-me na Web
 - 💼 [LinkedIn](https://www.linkedin.com/in/augusto-borges-a96638121/)
 - ✉️ [Email](mailto:augustobormoreira@gmail.com)
