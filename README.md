@@ -18,6 +18,8 @@ Neste repositório, você verá:
   - [Casos de Teste](./bugbank/casos-de-teste.md)
 - Academy of Bugs
   - [Casos de Teste](./academyofbugs/casos-de-teste.md)
+- QA Playground
+  - [Desafios](./qa-playground/README.md)
 
 ---
 
@@ -29,6 +31,9 @@ Neste repositório, você verá:
 - JavaScript
 - Cypress
 - Git
+- Java
+- Selenium
+- JUnit 5
 ---
 
 ## Encontre-me na Web
