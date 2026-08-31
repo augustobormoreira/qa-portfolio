@@ -3,6 +3,8 @@ package org.augustobormoreira.tests;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -70,5 +72,70 @@ public class HelloSeleniumTest {
         assertEquals(list_elements.size(), 6);
 
         driver.close();
+    }
+
+    @Test
+    public void typingInterstellarInMovieInputShouldShowInterstellarInMovieSpan() {
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://qaplayground.com/practice/input-fields");
+
+        //Get Movie Name Input and Submit Button
+        WebElement movieInput = driver.findElement(By.xpath("//input[@data-testid='input-movie-name']"));
+        WebElement movieInputSubmitButton = driver.findElement(By.xpath("//button[@data-testid='btn-submit-movie']"));
+
+        //Clear existing data, type Interstellar and submit
+        movieInput.clear();
+        movieInput.sendKeys("Interstellar");
+        movieInputSubmitButton.click();
+
+
+        //Get Movie Span
+        WebElement movieSpan = driver.findElement(By.xpath("//span[@data-testid='result-s01']"));
+
+        //Assert that the displayed text in the movie span is the same as input
+        assertTrue(movieSpan.getText().contains("Interstellar"));
+
+        driver.quit();
+    }
+
+    @Test
+    public void typingAnyMovieNameInMovieInputShouldShowNameInMovieSpan() {
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://qaplayground.com/practice/input-fields");
+
+        //Get Movie Name Input and Submit Button
+        WebElement movieInput = driver.findElement(By.xpath("//input[@data-testid='input-movie-name']"));
+        WebElement movieInputSubmitButton = driver.findElement(By.xpath("//button[@data-testid='btn-submit-movie']"));
+        String movieName = "The Immitation Game";
+
+        //Clear existing data, type The Immitation Game and submit
+        movieInput.clear();
+        movieInput.sendKeys(movieName);
+        movieInputSubmitButton.click();
+
+        //Get Movie Span
+        WebElement movieSpan = driver.findElement(By.xpath("//span[@data-testid='result-s01']"));
+
+        //Assert that the displayed text in the movie span is the same as input
+        assertTrue(movieSpan.getText().contains(movieName));
+        driver.quit();
+    }
+
+    @Test
+    public void ifInputHasValueThenPlaceHolderShouldHide() {
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://qaplayground.com/practice/input-fields");
+
+        //Get Movie Name Input and Submit Button
+        WebElement movieInput = driver.findElement(By.xpath("//input[@data-testid='input-movie-name']"));
+        String movieName = "The Immitation Game";
+
+        //Type movie in the input
+        movieInput.clear();
+        movieInput.sendKeys(movieName);
+
+        //Assert that the displayed text in the movie span is the same as input
+        assertEquals("", movieInput.getAttribute("placeholder"));
+        driver.quit();
     }
 }
