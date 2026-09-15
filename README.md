@@ -20,6 +20,8 @@ Neste repositório, você verá:
   - [Casos de Teste](./academyofbugs/casos-de-teste.md)
 - QA Playground
   - [Desafios](./qa-playground/README.md)
+- XYZ Bank
+  - [Casos de Teste](./xyzbank/README.md)
 
 ---
 
