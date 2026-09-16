@@ -1,16 +1,16 @@
 # Portfólio QA 🤖🐞
 
-Olá, eu me chamo [Augusto Borges](https://github.com/augustobormoreira) e seja muito bem-vindo(a) ao meu portfólio de QA! 
+Olá, eu me chamo Augusto Borges Moreira e seja muito bem-vindo(a) ao meu portfólio de QA! 
 
-Aqui, você encontrará todas minhas produções relacionadas à qualidade de software e testes, que expressam minhas habilidades e conhecimentos como um profissional de QA.
-
+Sou estudante de Ciência em Computação e atualmente foco meus estudos em duas áreas: QA e Software Development. Sei desenvolvimento do back-end e sua integração com Bancos de Dados usando ORMS, fornecer e consumir dados via endpoints. Criação do front-end e sua integração com o backend, como consumir e normatizar os dados a seremp apresentados para os clientes. Também sei Automação de Testes, com conhecimento em documentação da qualidade e implementação de casos de testes, usando frameworks como Selenium, Cypress e Playwright.
 Neste repositório, você verá:
 
-- Documentação da Qualidade
-  - Casos de Teste
-  - Relatórios de Bugs
-- Testes Automatizados
+Neste portfólio, você encontrará:
 
+- Scripts de testes automatizados, com comentários e explicações;
+- Documentação detalhada dos casos de teste;
+- **Bug reports** registrados por meio do GitHub Issues;
+- Scripts de **GitHub Actions** para integração contínua (CI).
 ---
 
 ## Aplicações Testadas
@@ -31,11 +31,12 @@ Neste repositório, você verá:
 
 ## Skills
 - JavaScript
-- Cypress
-- Git
+- TypeScript
 - Java
+- Cypress
 - Selenium
-- JUnit 5
+- Playwright
+- Git
 ---
 
 ## Encontre-me na Web
